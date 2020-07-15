@@ -37,7 +37,7 @@ namespace WpfAppVideo
             // Afficher authenitifaction en tant que une boîte de dialogue
             // qui retourne TRUE si l'authentification est réussi
             // authentification.Visibility = Visibility.Visible;
-            if (authentification.ShowDialog() == false)
+            if (authentification.ShowDialog() == true)
             {
                 // Authentification réussie
                 this.Show();

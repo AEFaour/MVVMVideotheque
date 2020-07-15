@@ -26,5 +26,12 @@ namespace WpfAppVideo.ViewModel
         {
             dbContext.Dispose();
         }
+
+        public static int AjoutCompte(Utilisateur utilisateur)
+        {
+            dbContext.utilisateurs.Add(utilisateur);
+
+            return dbContext.SaveChanges();
+        }
     }
 }
