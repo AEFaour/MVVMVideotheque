@@ -58,7 +58,9 @@
     </ApplicationDefinition>
     <Compile Include="AccesHelper\EncryptHelper.cs" />
     <Compile Include="AccesHelper\WindowsAccesHelper.cs" />
+    <Compile Include="Model\Role.cs" />
     <Compile Include="Model\Trace.cs" />
+    <Compile Include="Model\Utilisateur.cs" />
     <Compile Include="Views\Authentification.xaml.cs">
       <DependentUpon>Authentification.xaml</DependentUpon>
     </Compile>

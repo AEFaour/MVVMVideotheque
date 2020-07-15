@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace WpfAppVideo.Model
 {
-    public class Trace
+    public class Utilisateur
     {
         [Key]
+
         public int Id { get; set; }
-        //En fonction de la granularité des logs on
-        // peut créer plusieurs champs
-        // Sin non on peut créer un seul champs Info pour stocker les données
-        public string Info { get; set; }
+        public string Logname { get; set; }
+        public string Passwd { get; set; }
+        public string Nom { get; set; }
+
+        List<Role> Roles { get; set; }
     }
 }
