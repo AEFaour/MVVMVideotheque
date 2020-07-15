@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfAppVideo.Views.Authentification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppVideo.Views"
+        mc:Ignorable="d"
+        Title="Authentification" Height="450" Width="800" Background="#FFB64D4D">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66" />
+            <RowDefinition Height="Auto" MinHeight="34"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="213*"/>
+            <!-- * : un part-->
+            <!-- auto Ajuster à son contenu-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button Content="Button" Grid.Column="0" Grid.Row="2" Margin="-1,0,0,0" 
+                Grid.RowSpan="2" Grid.ColumnSpan="2" 
+                Background="AliceBlue"/>
+        <Button Content="Button"
+                Grid.Column="2" 
+                Height="34" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="158"/>
+
+    </Grid>
+</Window>
