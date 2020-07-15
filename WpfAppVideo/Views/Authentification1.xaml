@@ -5,29 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppVideo.Views"
         mc:Ignorable="d"
-        Title="Authentification1" Height="450" Width="800">
+        Title="Authentification1" Height="300.85" Width="726" FontFamily="Times New Roman" FontSize="16">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="101" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="36"/>
             <RowDefinition Height="35"/>
-            <RowDefinition Height="146"/>
-            <RowDefinition Height="42"/>
-            <RowDefinition Height="59"/>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="45"/>
             <!-- * : un part-->
             <!-- auto Ajuster à son contenu-->
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="88*" />
+            <ColumnDefinition Width="91*" />
         </Grid.ColumnDefinitions>
-        <Label Content="Nom Utilisateur" Grid.Column="1" HorizontalAlignment="Left" Height="36" Grid.Row="1" VerticalAlignment="Top" Width="157"/>
-        <Label Content="Mot de Passe" Grid.Column="1" HorizontalAlignment="Left" Height="35" Grid.Row="2" VerticalAlignment="Top" Width="159"/>
-        <TextBox x:Name="txtNom" Grid.Column="2" HorizontalAlignment="Left" Height="36" Margin="3,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
-        <PasswordBox x:Name="txtPassword" Grid.Column="2" HorizontalAlignment="Left" Height="35" Grid.Row="2" VerticalAlignment="Top" Width="158"/>
-        <Button Content="Se connecter" Grid.Column="4" HorizontalAlignment="Left" Height="42" Grid.Row="4" VerticalAlignment="Top" Width="158"/>
+        <Label Content="Nom Utilisateur" Grid.Column="1" HorizontalAlignment="Left" Height="36" 
+               Grid.Row="1" VerticalAlignment="Top" Width="157"/>
+        <Label Content="Mot de Passe" Grid.Column="1" HorizontalAlignment="Left" Height="35"
+               Grid.Row="2" VerticalAlignment="Top" Width="159"/>
+        <TextBox x:Name="txtNom" Grid.Column="2" HorizontalAlignment="Left" Height="36" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166"/>
+        <PasswordBox x:Name="txtPassword" Grid.Column="2" HorizontalAlignment="Left"
+                     Height="35" Grid.Row="2" VerticalAlignment="Top" Width="166"/>
+        <Button x:Name="btnLogin" Content="Se connecter" Grid.Column="3" 
+                HorizontalAlignment="Left" Height="42" Grid.Row="4" 
+                VerticalAlignment="Top" Width="172" Click="SeConnecter_Click"/>
     </Grid>
 </Window>

@@ -23,5 +23,11 @@ namespace WpfAppVideo.Views
         {
             InitializeComponent();
         }
+
+        private void SeConnecter_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(txtNom.Text + " " + txtPassword.Password);
+
+        }
     }
 }
