@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfAppVideo.AccesHelper;
+using WpfAppVideo.ViewModel;
 
 namespace WpfAppVideo.Views
 {
@@ -63,7 +64,7 @@ namespace WpfAppVideo.Views
             MessageBox.Show("Message claire :" + messageCrypte);
             //Cas 2- log en base
             // Logger en base 
-            // tester user en base
+            GestionVideo.LoggToBase(messageCrypte);
         }
 
         private void Verifier()
