@@ -71,8 +71,9 @@ namespace WpfAppVideo.Views
                 }
                 else
                 {
-
+                    MessageBox.Show("Erreur sur insertion en base");
                     this.DialogResult = false;
+
                 }
             }
             else

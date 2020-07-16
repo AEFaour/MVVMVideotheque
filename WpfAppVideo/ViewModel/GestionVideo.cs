@@ -42,6 +42,13 @@ namespace WpfAppVideo.ViewModel
             set { role = value; }
         }
 
+        private Info info;
+        public Info Info
+        {
+            get { return info; }
+            set { info = value; }
+        }
+
         public AjoutUtilisateur AjoutUtilisateur { get; set; }
 
         public GestionVideo()
@@ -54,8 +61,9 @@ namespace WpfAppVideo.ViewModel
                                                            // la class AjoutUtilisateur accede aux membres du ViewModel
                                                            // Injection de dépendance
                                                            // Instancier le paramètre de la commande
-            User = new Utilisateur();
+            User = new Utilisateur() { Logname = string.Empty, Nom = string.Empty };
             Role = new Role();
+            Info = new Info() { Status = string.Empty };
         }
 
         public static bool CompteUnique(string logname)

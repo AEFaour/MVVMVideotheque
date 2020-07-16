@@ -18,14 +18,26 @@ namespace WpfAppVideo.Commandes
             this.gestionVideo = gestionVideo;
         }
 
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
 
         public bool CanExecute(object parameter)
         {
-            Utilisateur u = (Utilisateur)parameter;
+
             bool _ok = false;
-            _ok = (u.Nom.Length > 3) && (u.Logname.Length
-                 > 3) && GestionVideo.CompteUnique(u.Logname);
+
+            if (parameter != null)
+            {
+                Utilisateur u = (Utilisateur)parameter;
+
+                _ok = (u.Nom.Length > 3) && (u.Logname.Length > 3);
+                // && GestionVideo.CompteUnique(u.Logname);
+                // à tester au moment de l'insertion
+            }
+
             return _ok;
         }
 
@@ -35,7 +47,16 @@ namespace WpfAppVideo.Commandes
             Utilisateur u = (Utilisateur)parameter;
             u.Roles = new List<Role>();
             u.Roles.Add(gestionVideo.Role); // role qui est selectionné sur le combobox
-            GestionVideo.AjoutCompte(u);
+
+
+            if (GestionVideo.CompteUnique(u.Logname))
+            {
+                GestionVideo.AjoutCompte(u);
+            }
+            else
+            {
+                gestionVideo.Info.Status = " Echec d'enriistrer en base, verifiez le logname ";
+            }
         }
 
     }
