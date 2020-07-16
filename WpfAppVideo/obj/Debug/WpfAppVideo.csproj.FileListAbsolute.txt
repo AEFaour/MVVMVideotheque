@@ -26,3 +26,4 @@ C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.c
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.csproj.CopyComplete
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.exe
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.pdb
+C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.csprojAssemblyReference.cache

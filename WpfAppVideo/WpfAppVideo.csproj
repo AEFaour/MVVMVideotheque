@@ -66,6 +66,7 @@
     </ApplicationDefinition>
     <Compile Include="AccesHelper\EncryptHelper.cs" />
     <Compile Include="AccesHelper\WindowsAccesHelper.cs" />
+    <Compile Include="Commandes\AjoutUtilisateur.cs" />
     <Compile Include="Migrations\202007151232290_InitialCreate.cs" />
     <Compile Include="Migrations\202007151232290_InitialCreate.Designer.cs">
       <DependentUpon>202007151232290_InitialCreate.cs</DependentUpon>
