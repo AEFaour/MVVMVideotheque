@@ -66,11 +66,18 @@ namespace WpfAppVideo.ViewModel
             Info = new Info() { Status = string.Empty };
         }
 
+        public static bool NomUnique(string nom)
+        {
+            var u = dbContext.utilisateurs.Where(x => x.Nom == nom).ToList();
+            return (u.Count == 0);
+        }
+
         public static bool CompteUnique(string logname)
         {
             // Utilisateur u = dbContext.utilisateurs.SingleOrDefault(x => x.Logname == logname);
-            var u = dbContext.utilisateurs.Where(x => x.Logname == logname);
-            return (u == null);
+            var u = dbContext.utilisateurs.Where(x => x.Logname == logname).ToList();
+
+            return (u.Count == 0);
         }
 
         public static int LoggToBase(string log)

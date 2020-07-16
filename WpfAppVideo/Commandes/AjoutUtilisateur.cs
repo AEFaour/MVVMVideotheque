@@ -49,13 +49,22 @@ namespace WpfAppVideo.Commandes
             u.Roles.Add(gestionVideo.Role); // role qui est selectionné sur le combobox
 
 
-            if (GestionVideo.CompteUnique(u.Logname))
+            if (GestionVideo.CompteUnique(u.Logname) && GestionVideo.NomUnique(u.Nom))
             {
                 GestionVideo.AjoutCompte(u);
+                //int i = GestionVideo.AjoutCompte(u);
+                //if (i > 0)
+                //{
+                //    u.Nom = string.Empty;
+                //    u.Logname = string.Empty;
+                //    u.Passwd = string.Empty;
+
+                //}
+
             }
             else
             {
-                gestionVideo.Info.Status = " Echec d'enrigistrer en base, verifiez le logname ";
+                gestionVideo.Info.Status = " Echec d'enrigistrer en base, verifiez le logname non unique";
             }
         }
 
