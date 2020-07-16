@@ -13,6 +13,7 @@ namespace WpfAppVideo.ViewModel
         private static EF_TP_MVVM dbContext = new EF_TP_MVVM();
 
         private static ObservableCollection<Role> roles;
+
         public static ObservableCollection<Role> Roles
         {
             get { return roles; }
@@ -20,10 +21,12 @@ namespace WpfAppVideo.ViewModel
         }
 
 
+
         public GestionVideo()
         {
             if (roles == null)
                 roles = new ObservableCollection<Role>(dbContext.roles.ToList());
+
 
         }
         public static int LoggToBase(string log)
@@ -35,6 +38,20 @@ namespace WpfAppVideo.ViewModel
             );
             // return < 0--> NOK
             return dbContext.SaveChanges();
+        }
+
+        public static Utilisateur RechercheUserByLogin(string login, string passCrypt)
+        {
+            Utilisateur utilisateur = dbContext.utilisateurs.SingleOrDefault(
+                 x => x.Logname.ToLower() == login.ToLower()
+                 &&
+                 x.Passwd == passCrypt
+                 );
+
+            // if (utilisateur == null) return false;
+            // si on veut retourner l'utilisateur
+
+            return utilisateur;
         }
 
         public void Dispose()

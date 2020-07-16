@@ -40,6 +40,30 @@ namespace WpfAppVideo.Views
                 utilisateur.Logname = txtLogname.Text.Trim().ToLower();
                 utilisateur.Nom = txtNom.Text.Trim().ToLower();
                 utilisateur.Passwd = AccesHelper.EncryptHelper.Base64Encode(txtPass1.Password);
+
+                // Récupérer le role selectionné
+                Role roleUtilisateur = (Role)cbbRole.SelectedItem;
+
+                //roleUtilisateur.Utilisateurs = new List<Utilisateur>();
+
+                //Initialiser la liste des roles pour le nouveau utilisateur
+
+                utilisateur.Roles = new List<Role>();
+
+                utilisateur.Roles.Add(roleUtilisateur);
+                //Exemple si le role est attribué en fonction de la présence du mot Modt admin dans le login
+                //if (utilisateur.Nom.Contains("Admin"))
+                //{
+                //    // Récupérer le role Admin depuis la base
+                //    using (EF_TP_MVVM dtc = new EF_TP_MVVM())
+                //    {
+                //        //Role _r = dtc.roles.Where(x => x.Nom.Contains("Admin")).SingleOrDefault();
+                //        Role _r = dtc.roles.SingleOrDefault(x => x.Nom.Contains("Admin"));
+                //        utilisateur.Roles.Add(_r);
+
+                //    }
+
+                //}
                 int i = GestionVideo.AjoutCompte(utilisateur);
                 if (i > 0)
                 {

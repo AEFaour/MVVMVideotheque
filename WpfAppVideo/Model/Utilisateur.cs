@@ -16,6 +16,6 @@ namespace WpfAppVideo.Model
         public string Passwd { get; set; }
         public string Nom { get; set; }
 
-        List<Role> Roles { get; set; }
+        public List<Role> Roles { get; set; }
     }
 }

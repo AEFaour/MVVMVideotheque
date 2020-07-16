@@ -15,6 +15,6 @@ namespace WpfAppVideo.Model
         public string Descriptif { get; set; }
 
         // Relation Many to Many avec les Utilisateurs
-        List<Utilisateur> utilisateurs { get; set; }
+        public List<Utilisateur> Utilisateurs { get; set; }
     }
 }

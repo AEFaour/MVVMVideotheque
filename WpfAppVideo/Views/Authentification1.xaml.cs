@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfAppVideo.AccesHelper;
+using WpfAppVideo.Model;
 using WpfAppVideo.ViewModel;
 
 namespace WpfAppVideo.Views
@@ -43,7 +44,18 @@ namespace WpfAppVideo.Views
 
         private void AuthentificationEnBase()
         {
-            MessageBox.Show("Recherche en base ...");
+            //MessageBox.Show("Recherche en base ...");
+            // Traitement
+            Utilisateur utilisateur = GestionVideo.RechercheUserByLogin(txtNom.Text, EncryptHelper.Base64Encode(txtPassword.Password));
+            if (utilisateur == null)
+            {
+                MessageBox.Show("Login ou Mot de passe incorrecte");
+            }
+            else
+            {
+                MessageBox.Show("Bienvenue " + utilisateur.Nom + "!");
+                this.DialogResult = true;
+            }
         }
 
         private void AuthentificationWindows()
