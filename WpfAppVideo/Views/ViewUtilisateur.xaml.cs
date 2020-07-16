@@ -21,15 +21,19 @@ namespace WpfAppVideo.Views
     /// </summary>
     public partial class ViewUtilisateur : Window
     {
+        GestionVideo gestionVideo = new GestionVideo();
         public ViewUtilisateur()
         {
             InitializeComponent();
+            this.DataContext = gestionVideo;
         }
 
 
         private void AjouterUtilisateur_Click(object sender, RoutedEventArgs e)
         {
             //this.DialogResult = true; // simuler le cas ou l'utilisateur s'est enregistré en base
+
+            // Verification --> Pas même login, nom > 3 caractères, Mot de Pass > 5 caractères
             if (txtPass1.Password.Equals(txtPass2.Password))
             {
                 Utilisateur utilisateur = new Utilisateur();

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppVideo.Views"
         mc:Ignorable="d"
-        Title="Saisie infos utilisateur" Height="258" Width="658" FontFamily="Times New Roman" FontSize="14">
+        Title="Saisie infos utilisateur" Height="315" Width="668" FontFamily="Times New Roman" FontSize="14">
     <Grid Margin="0,0,-8,-21">
         <Grid.RowDefinitions>
             <RowDefinition Height="34*"/>
@@ -15,11 +15,16 @@
         <Label Content="Logname" HorizontalAlignment="Left" Height="28" Margin="36,65,0,0" VerticalAlignment="Top" Width="123"/>
         <Label Content="Mot de PASSE" HorizontalAlignment="Left" Height="28" Margin="36,126,0,0" VerticalAlignment="Top" Width="123"/>
         <Label Content=" Resaisir le Mot de PASSE" HorizontalAlignment="Left" Height="28" Margin="25,174,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label Content=" Rôle" HorizontalAlignment="Left" Height="28" Margin="25,221,0,0" VerticalAlignment="Top" Width="162"/>
         <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="37" Margin="202,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252"/>
         <TextBox x:Name="txtLogname" HorizontalAlignment="Left" Height="37" Margin="202,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="252" Panel.ZIndex="1"/>
         <PasswordBox x:Name="txtPass1" HorizontalAlignment="Left" Height="37" Margin="202,117,0,0"  VerticalAlignment="Top" Width="252" Panel.ZIndex="2"/>
         <PasswordBox x:Name="txtPass2" HorizontalAlignment="Left" Height="35" Margin="203,169,0,0"  VerticalAlignment="Top" Width="251" Panel.ZIndex="3"/>
-        <Button Content="Enregistrer" HorizontalAlignment="Left" Height="35" Margin="495,169,0,0" VerticalAlignment="Top" Width="137" Click="AjouterUtilisateur_Click"/>
+        <Button Content="Enregistrer" HorizontalAlignment="Left" Height="35" Margin="482,228,0,0" VerticalAlignment="Top" Width="137" Click="AjouterUtilisateur_Click"/>
+        <ComboBox
+            ItemsSource="{Binding Path=Roles}" DisplayMemberPath="Nom"
+            x:Name="cbbRole" HorizontalAlignment="Left"
+            Height="35" Margin="203,228,0,0" VerticalAlignment="Top" Width="251"/>
 
     </Grid>
 </Window>

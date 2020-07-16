@@ -121,7 +121,8 @@ namespace WpfAppVideo.Views
 
         private void Annuler_Connexion_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = false;
+            this.Close();
+            //this.DialogResult = false;
         }
     }
 }
