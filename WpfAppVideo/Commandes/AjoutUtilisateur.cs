@@ -55,7 +55,7 @@ namespace WpfAppVideo.Commandes
             }
             else
             {
-                gestionVideo.Info.Status = " Echec d'enriistrer en base, verifiez le logname ";
+                gestionVideo.Info.Status = " Echec d'enrigistrer en base, verifiez le logname ";
             }
         }
 

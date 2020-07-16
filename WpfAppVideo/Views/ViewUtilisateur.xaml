@@ -11,12 +11,12 @@
             <RowDefinition Height="34*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Content="Nom et prénom" HorizontalAlignment="Left" Height="28" Margin="36,22,0,0" VerticalAlignment="Top" Width="123"/>
-        <Label Content="Logname" HorizontalAlignment="Left" Height="28" Margin="36,65,0,0" VerticalAlignment="Top" Width="123"/>
-        <Label Content="Mot de PASSE" HorizontalAlignment="Left" Height="28" Margin="36,126,0,0" VerticalAlignment="Top" Width="123"/>
-        <Label Content="Resaisir le Mot de PASSE" HorizontalAlignment="Left" Height="28" Margin="25,174,0,0" VerticalAlignment="Top" Width="162"/>
-        <Label Content="Rôle" HorizontalAlignment="Left" Height="28" Margin="25,221,0,0" VerticalAlignment="Top" Width="162"/>
-        <Label Content="{Binding Info.Status}" HorizontalAlignment="Left" Height="28" Margin="25,285,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label Content="Nom et prénom" HorizontalAlignment="Left" Height="28" Margin="25,22,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label Content="Logname" HorizontalAlignment="Left" Height="28" Margin="25,65,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label Content="Mot de PASSE" HorizontalAlignment="Left" Height="28" Margin="25,126,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label Content="Resaisir le Mot de PASSE" HorizontalAlignment="Left" Height="28" Margin="25,169,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label Content="Rôle" HorizontalAlignment="Left" Height="28" Margin="25,235,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label Content="{Binding Info.Status, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Height="28" Margin="25,285,0,0" VerticalAlignment="Top" Width="660"/>
         <TextBox x:Name="txtNom" 
                  HorizontalAlignment="Left" Height="37" Margin="202,13,0,0" 
                  TextWrapping="Wrap" Text="{Binding User.Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="252"/>

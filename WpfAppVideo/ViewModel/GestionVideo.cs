@@ -70,7 +70,7 @@ namespace WpfAppVideo.ViewModel
         {
             // Utilisateur u = dbContext.utilisateurs.SingleOrDefault(x => x.Logname == logname);
             var u = dbContext.utilisateurs.Where(x => x.Logname == logname);
-            return (u != null);
+            return (u == null);
         }
 
         public static int LoggToBase(string log)
