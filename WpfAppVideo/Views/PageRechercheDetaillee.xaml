@@ -9,9 +9,29 @@
 
     <Grid>
         <ListBox x:Name="lstBxDetailFilm" 
-                 HorizontalAlignment="Left" Height="289" 
-                 Margin="72,81,0,0" VerticalAlignment="Top"
-                 Width="455" Background="#FFFDBDBD"/>
+                 HorizontalAlignment="Left" 
+                 Margin="10,128,0,10"
+                 Width="580" Background="#FFFDBDBD">
+            <ListBox.ItemTemplate>
+                <!--Si on veut afficher du text, des boutons ou des images dans une liste box, 
+                on utilise un DataTemplate pour
+                cela il faut un ItemTemplate-->
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="{Binding}" Height="130"></Image>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </StackPanel>
 
+                    <!--Binding tout court signifie que le context
+                    de binding est l'élément parent-->
+                </DataTemplate>
+                <!--Organiser l'affichage des détails de film-->
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
     </Grid>
 </Page>

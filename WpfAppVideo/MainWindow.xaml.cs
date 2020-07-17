@@ -59,10 +59,15 @@ namespace WpfAppVideo
             txtAjFilm.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Ajout_Click(object sender, RoutedEventArgs e)
         {
 
             frame.NavigationService.Navigate(new PageFormulaireFilm());
+        }
+
+        private void Button_Recherche_Click(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(new PageRechercheDetaillee());
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,14 @@ namespace WpfAppVideo.Views
         public PageRechercheDetaillee()
         {
             InitializeComponent();
+            InitListBoxFilm();
+        }
+
+        private void InitListBoxFilm()
+        {
+            string _rep = ConfigurationManager.AppSettings["repImage"];
+            var _listFilmFromImage = Directory.GetFiles(_rep, "*.png");
+            lstBxDetailFilm.ItemsSource = _listFilmFromImage;
         }
     }
 }
