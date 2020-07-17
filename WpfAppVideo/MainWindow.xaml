@@ -7,26 +7,48 @@
         mc:Ignorable="d"
         
         Background="Transparent"  ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" d:DesignWidth="700" d:DesignHeight="400"
+        WindowStartupLocation="CenterScreen" d:DesignWidth="910" d:DesignHeight="480"
        
         >
     <Grid Background="#FFE24444">
-        <StackPanel HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="216" Background="#FFEE7D63" Margin="0,0,0,-29">
+        <StackPanel HorizontalAlignment="Left" Height="451" 
+                    VerticalAlignment="Top" Width="212"
+                    Background="#FFEE7D63">
             <StackPanel Orientation="Horizontal">
-                <Button  Content="Ajouter"  Margin="10,50,10,30" Height="30" 
-                         MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="Button_Ajout_Click"/>
-                <TextBlock  x:Name="txtAjFilm" Height="30"  Margin="5,50,5,30" TextWrapping="Wrap" Text="Ajouter films"
-                            RenderTransformOrigin="06.614,1.552" Width="150" Background="#FFFB663A"/>
+                <Button Margin="10,50,10,30" Height="63" Width="63"
+                         MouseEnter="Button_MouseEnter" Background="Transparent"
+                        MouseLeave="Button_MouseLeave" Click="Button_Ajout_Click">
+                    <Image Source="C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\Logos\logo film.jpg" Stretch="Fill" />
+                </Button>
+                <TextBlock  x:Name="txtAjFilm" Height="30" 
+                            Margin="5,50,5,30" TextWrapping="Wrap" Text="Ajouter film"
+                            Width="114" Background="#FFFB663A" Foreground="Gold"
+                            Opacity="0.8" FontSize="18"/>
 
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="10,30,86,30" Background="Transparent"
+                        Height="63" Width="63" Click="Button_Recherche_Click">
+                    <Image Source="C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\Logos\logo cine.jpg"  Stretch="Fill" />
 
-            <Button Content="Rechercher"  Margin="10,30,86,30" Height="30" Click="Button_Recherche_Click" />
-            <Button Content="Mes favories"  Margin="10,30,86,30" Height="30"/>
-            <Button Content="Gestion des films"  Margin="10,30,86,30" Height="30"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button   Margin="10,30,86,30" Background="Transparent"
+                          Height="63" Width="63">
+                    <Image Source="C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\Logos\favoris logo.jpg"  Stretch="Fill" />
+
+                </Button>
+            </StackPanel>
+
 
 
         </StackPanel>
-        <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="400" Margin="221,0,0,0" VerticalAlignment="Top" Width="600" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="410" Margin="221,40,0,0" VerticalAlignment="Top" Width="680" NavigationUIVisibility="Hidden"/>
+        <Button HorizontalAlignment="Left"  Margin="842,0,0,0" VerticalAlignment="Top"  Height="63" Width="63"  Background="Transparent">
+            <Image Source="C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\Logos\fermer.jpg"  Stretch="Fill" />
+
+        </Button>
 
     </Grid>
 </Window>
