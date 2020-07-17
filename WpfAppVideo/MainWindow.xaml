@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppVideo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
         
+        Background="Transparent"  ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" d:DesignWidth="858" d:DesignHeight="432"
+       
+        >
+    <Grid Background="#FFE24444">
+        <StackPanel HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="216" Background="#FFEE7D63" Margin="0,0,0,-29">
+            <StackPanel Orientation="Horizontal">
+                <Button  Content="Button"  Margin="10,50,10,30" Height="30" 
+                         MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Click="Button_Click"/>
+                <TextBlock  x:Name="txtAjFilm" Height="30"  Margin="5,50,5,30" TextWrapping="Wrap" Text="Ajouter films"
+                            RenderTransformOrigin="06.614,1.552" Width="150" Background="#FFFB663A"/>
+
+            </StackPanel>
+
+            <Button Content="Rechercher"  Margin="10,30,86,30" Height="30" />
+            <Button Content="Mes favories"  Margin="10,30,86,30" Height="30"/>
+            <Button Content="Gestion des films"  Margin="10,30,86,30" Height="30"/>
+
+
+        </StackPanel>
+        <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="400" Margin="221,0,0,0" VerticalAlignment="Top" Width="600" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>

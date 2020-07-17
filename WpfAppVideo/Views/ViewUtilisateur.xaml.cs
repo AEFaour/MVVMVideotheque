@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +27,22 @@ namespace WpfAppVideo.Views
         {
             InitializeComponent();
             this.DataContext = gestionVideo;
+            //Se souscrire à l'évènement INotifypropertyChanged de la classe Info
+            gestionVideo.Info.PropertyChanged += EnregistrementEffectue;
         }
+        // La méthode va s'executer à cheque fois qu'on crée un compte
 
+        private void EnregistrementEffectue(object sender, PropertyChangedEventArgs e)
+        {
+            //string s = string.Empty;
+            Info info = (Info)sender;
+            if (info.Status.Equals(AccesHelper.Messages.EnregistrementCompte))
+            {
+                MessageBox.Show("Enregistrement effectue, retour à la fênetre d'authentification");
+                this.DialogResult = true;
+                //this.Close();
+            }
+        }
 
         private void AjouterUtilisateur_Click(object sender, RoutedEventArgs e)
         {
@@ -80,6 +95,17 @@ namespace WpfAppVideo.Views
             {
                 MessageBox.Show("Mot de passe non identiques");
             }
+
+        }
+
+        private void Passwd_Click(object sender, RoutedEventArgs e)
+        {
+            // Binding sur Password ...
+            if (txtPass2.Password == txtPass1.Password)
+            {
+                gestionVideo.User.Passwd = AccesHelper.EncryptHelper.Base64Encode(txtPass2.Password);
+            }
+            // tant qu'ils ne sont pas égaux user.passwd vide
 
         }
     }

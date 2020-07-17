@@ -6,6 +6,7 @@ C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\bin\Debug\EntityFramewo
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\bin\Debug\EntityFramework.xml
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.csprojAssemblyReference.cache
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\MainWindow.g.cs
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\Authentification.g.cs
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\Authentification1.g.cs
@@ -26,3 +27,5 @@ C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.c
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.csproj.CopyComplete
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.exe
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.pdb
+C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\PageFormulaireFilm.g.cs
+C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\PageFormulaireFilm.baml

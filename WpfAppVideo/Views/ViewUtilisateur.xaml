@@ -23,12 +23,13 @@
         <TextBox x:Name="txtLogname"
                  HorizontalAlignment="Left" Height="37" Margin="202,65,0,0"
                  TextWrapping="Wrap" Text="{Binding User.Logname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="252" Panel.ZIndex="1"/>
-        <PasswordBox x:Name="txtPass1"
+        <PasswordBox
+                     x:Name="txtPass1"
                      HorizontalAlignment="Left" Height="37" Margin="202,117,0,0"
-                     VerticalAlignment="Top" Width="252" Panel.ZIndex="2"/>
+                     VerticalAlignment="Top" Width="252" Panel.ZIndex="2" />
         <PasswordBox x:Name="txtPass2" 
                      HorizontalAlignment="Left" Height="35" Margin="203,169,0,0"
-                     VerticalAlignment="Top" Width="251" Panel.ZIndex="3"/>
+                     VerticalAlignment="Top" Width="251" Panel.ZIndex="3" PasswordChanged="Passwd_Click"/>
         <Button Content="Enregistrer" HorizontalAlignment="Left" Height="35" Margin="524,164,0,0" VerticalAlignment="Top" Width="137" Click="AjouterUtilisateur_Click"/>
         <ComboBox
             ItemsSource="{Binding Path=Roles}" DisplayMemberPath="Nom"

@@ -48,5 +48,21 @@ namespace WpfAppVideo
             }
         }
 
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            txtAjFilm.Visibility = Visibility.Visible;
+        }
+
+        private void Button_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+            txtAjFilm.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            frame.NavigationService.Navigate(new PageFormulaireFilm());
+        }
     }
 }

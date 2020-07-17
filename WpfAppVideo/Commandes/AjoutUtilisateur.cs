@@ -36,6 +36,7 @@ namespace WpfAppVideo.Commandes
                 _ok = (u.Nom.Length > 3) && (u.Logname.Length > 3);
                 // && GestionVideo.CompteUnique(u.Logname);
                 // à tester au moment de l'insertion
+                _ok = _ok && !string.IsNullOrEmpty(u.Passwd);
             }
 
             return _ok;
@@ -51,20 +52,23 @@ namespace WpfAppVideo.Commandes
 
             if (GestionVideo.CompteUnique(u.Logname) && GestionVideo.NomUnique(u.Nom))
             {
-                GestionVideo.AjoutCompte(u);
-                //int i = GestionVideo.AjoutCompte(u);
-                //if (i > 0)
-                //{
-                //    u.Nom = string.Empty;
-                //    u.Logname = string.Empty;
-                //    u.Passwd = string.Empty;
 
-                //}
+                int i = GestionVideo.AjoutCompte(u);
+                if (i > 0)
+                {
+                    u.Nom = string.Empty; u.Logname = string.Empty; u.Passwd = string.Empty;
+                    // gestionVideo.Info.Status = "Compte Enregistre";
+                    gestionVideo.Info.Status = AccesHelper.Messages.EnregistrementCompte;
+                    //Notifier la fenetre parente
+                }
+                else
+                    gestionVideo.Info.Status = " Echec d'enregistrer en base";
+
 
             }
             else
             {
-                gestionVideo.Info.Status = " Echec d'enrigistrer en base, verifiez le logname non unique";
+                gestionVideo.Info.Status = " logname non unique";
             }
         }
 
