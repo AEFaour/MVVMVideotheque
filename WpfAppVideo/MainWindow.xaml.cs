@@ -69,5 +69,14 @@ namespace WpfAppVideo
         {
             frame.NavigationService.Navigate(new PageRechercheDetaillee());
         }
+
+
+
+        private void Fermer_Application_Click(object sender, RoutedEventArgs e)
+        {
+            //Terminer l'application
+            this.Close();
+
+        }
     }
 }

@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:WpfAppVideo"
         mc:Ignorable="d"
         
-        Background="Transparent"  ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" d:DesignWidth="910" d:DesignHeight="480"
+        Title="MainWindow" Height="479.894" Width="911.712"
+        
+        Background="Transparent" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
        
         >
     <Grid Background="#FFE24444">
@@ -45,7 +47,7 @@
 
         </StackPanel>
         <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="410" Margin="221,40,0,0" VerticalAlignment="Top" Width="680" NavigationUIVisibility="Hidden"/>
-        <Button HorizontalAlignment="Left"  Margin="842,0,0,0" VerticalAlignment="Top"  Height="63" Width="63"  Background="Transparent">
+        <Button HorizontalAlignment="Left"  Margin="842,0,0,0" VerticalAlignment="Top"  Height="63" Width="63"  Background="Transparent" Click="Fermer_Application_Click">
             <Image Source="C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\Logos\fermer.jpg"  Stretch="Fill" />
 
         </Button>
