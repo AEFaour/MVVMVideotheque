@@ -53,7 +53,7 @@ namespace WpfAppVideo.Views
             }
             else
             {
-                MessageBox.Show("Bienvenue " + utilisateur.Nom + "!");
+                // MessageBox.Show("Bienvenue " + utilisateur.Nom + "!");
                 this.DialogResult = true;
             }
         }

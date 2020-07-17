@@ -29,3 +29,5 @@ C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.e
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\WpfAppVideo.pdb
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\PageFormulaireFilm.g.cs
 C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\PageFormulaireFilm.baml
+C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\PageRechercheDetaillee.g.cs
+C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\obj\Debug\Views\PageRechercheDetaillee.baml

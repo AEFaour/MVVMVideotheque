@@ -67,6 +67,7 @@
     </ApplicationDefinition>
     <Compile Include="AccesHelper\EncryptHelper.cs" />
     <Compile Include="AccesHelper\WindowsAccesHelper.cs" />
+    <Compile Include="Commandes\AjoutFilm.cs" />
     <Compile Include="Commandes\AjoutUtilisateur.cs" />
     <Compile Include="AccesHelper\Messages.cs" />
     <Compile Include="Migrations\202007151232290_InitialCreate.cs" />
@@ -93,6 +94,9 @@
     <Compile Include="Views\PageFormulaireFilm.xaml.cs">
       <DependentUpon>PageFormulaireFilm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PageRechercheDetaillee.xaml.cs">
+      <DependentUpon>PageRechercheDetaillee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ViewUtilisateur.xaml.cs">
       <DependentUpon>ViewUtilisateur.xaml</DependentUpon>
     </Compile>
@@ -117,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PageFormulaireFilm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageRechercheDetaillee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

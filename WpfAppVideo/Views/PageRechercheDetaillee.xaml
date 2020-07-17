@@ -8,7 +8,10 @@
       Title="PageRechercheDetaillee" Background="#FFE88383" Height="400" Width="600">
 
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="289" Margin="72,81,0,0" VerticalAlignment="Top" Width="455"/>
+        <ListBox x:Name="lstBxDetailFilm" 
+                 HorizontalAlignment="Left" Height="289" 
+                 Margin="72,81,0,0" VerticalAlignment="Top"
+                 Width="455" Background="#FFFDBDBD"/>
 
     </Grid>
 </Page>

@@ -8,14 +8,20 @@
       Title="PageFormulaireFilm" Width="600" Height="400" Background="#FFDA8585">
 
     <Grid>
-        <Label Content="Titre " HorizontalAlignment="Left" Height="56" Margin="27,50,0,0" VerticalAlignment="Top" Width="119"/>
-        <Label Content="Affiche " HorizontalAlignment="Left" Height="56" Margin="362,0,0,0" VerticalAlignment="Top" Width="119"/>
-        <Label Content="Résumé " HorizontalAlignment="Left" Height="56" Margin="27,124,0,0" VerticalAlignment="Top" Width="119"/>
-        <TextBlock HorizontalAlignment="Left" Height="46" Margin="151,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" Background="White"/>
-        <TextBlock HorizontalAlignment="Left" Height="136" Margin="151,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" Background="White"/>
-        <ComboBox x:Name="ccbImage" HorizontalAlignment="Left" Height="36" Margin="362,37,0,0" VerticalAlignment="Top" Width="199" SelectionChanged="cbbImage_SelectionChanged"/>
-        <Image x:Name="imgFilm" Source="C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\Images\2.png" HorizontalAlignment="Left" Height="204" Margin="362,91,0,0" VerticalAlignment="Top" Width="199" />
-        <Button Content="Ajouter" HorizontalAlignment="Left" Height="28" Margin="362,343,0,0" VerticalAlignment="Top" Width="186" Background="#FFE0A43B"/>
+        <Label Content="Titre " HorizontalAlignment="Left" Height="56" Margin="32,37,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label Content="Affiche " HorizontalAlignment="Left" Height="56" Margin="362,10,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label Content="Résumé " HorizontalAlignment="Left" Height="56" Margin="32,93,0,0" VerticalAlignment="Top" Width="119"/>
+        <TextBlock HorizontalAlignment="Left" Height="36" Margin="124,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" Background="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="56" Margin="124,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" Background="White"/>
+        <ComboBox x:Name="cbbImage" HorizontalAlignment="Left" Height="36" Margin="362,37,0,0" VerticalAlignment="Top" Width="199" SelectionChanged="cbbImage_SelectionChanged"/>
+        <Image x:Name="imgFilm" Source="C:\Users\Anas FAOUR\source\repos\WpfAppVideo\WpfAppVideo\Images\2.png"
+               HorizontalAlignment="Left" Height="228" Margin="362,91,0,0" VerticalAlignment="Top" Width="199" Stretch="Fill" />
+        <Button Content="Enregistrer"
+                HorizontalAlignment="Left" Height="28"
+                Margin="362,343,0,0" VerticalAlignment="Top"
+                Command="{Binding AjoutFilm}"
+                
+                Width="186" Background="#FFE0A43B"/>
 
     </Grid>
 </Page>

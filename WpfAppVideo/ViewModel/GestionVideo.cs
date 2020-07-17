@@ -50,6 +50,7 @@ namespace WpfAppVideo.ViewModel
         }
 
         public AjoutUtilisateur AjoutUtilisateur { get; set; }
+        public AjoutFilm AjoutFilm { get; set; }
 
         public GestionVideo()
         {
@@ -64,6 +65,7 @@ namespace WpfAppVideo.ViewModel
             User = new Utilisateur() { Logname = string.Empty, Nom = string.Empty };
             Role = new Role();
             Info = new Info() { Status = string.Empty };
+            AjoutFilm = new AjoutFilm(this);
         }
 
         public static bool NomUnique(string nom)
