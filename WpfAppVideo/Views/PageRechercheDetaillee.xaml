@@ -10,7 +10,7 @@
     <Grid>
         <ListBox x:Name="lstBxDetailFilm" 
                  HorizontalAlignment="Left" 
-                 Margin="10,128,0,10"
+                 Margin="10,40,0,171"
                  Width="580" Background="#FFFDBDBD">
             <ListBox.ItemTemplate>
                 <!--Si on veut afficher du text, des boutons ou des images dans une liste box, 
@@ -19,7 +19,11 @@
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
                         <Image Source="{Binding}" Height="130"></Image>
-                        <TextBlock Text="{Binding}"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Titre :"></Label>
+                            <TextBlock Text="Titre 123"></TextBlock>
+                        </StackPanel>
+                        <TextBlock Text="18.5€"></TextBlock>
                     </StackPanel>
 
                     <!--Binding tout court signifie que le context
@@ -33,5 +37,9 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>
+        <Image 
+            Source="{Binding SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ElementName=lstBxDetailFilm}" 
+               HorizontalAlignment="Left"  Height="127" Margin="41,249,0,0" 
+               VerticalAlignment="Top" Width="108" Stretch="Fill"/>
     </Grid>
 </Page>

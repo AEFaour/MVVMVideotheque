@@ -79,11 +79,41 @@
       <DependentUpon>202007160813131_listsPublic.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\EFVideoDbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFVideoDbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EFVideoDbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFVideoDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EFVideoDbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFVideoDbContext.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Model\EF_TP_MVVM.cs" />
+    <Compile Include="Model\Films.cs">
+      <DependentUpon>EFVideoDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Genres.cs">
+      <DependentUpon>EFVideoDbContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Info.cs" />
+    <Compile Include="Model\pays.cs">
+      <DependentUpon>EFVideoDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PaysFilm.cs">
+      <DependentUpon>EFVideoDbContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\Trace.cs" />
     <Compile Include="Model\Utilisateur.cs" />
+    <Compile Include="Model\vFilmLabelle.cs">
+      <DependentUpon>EFVideoDbContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\GestionVideo.cs" />
     <Compile Include="Views\Authentification.xaml.cs">
       <DependentUpon>Authentification.xaml</DependentUpon>
@@ -157,6 +187,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\EFVideoDbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EFVideoDbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\EFVideoDbContext.edmx.diagram">
+      <DependentUpon>EFVideoDbContext.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -175,6 +212,21 @@
     <Resource Include="Images\2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\EFVideoDbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFVideoDbContext.edmx</DependentUpon>
+      <LastGenOutput>EFVideoDbContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\EFVideoDbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFVideoDbContext.edmx</DependentUpon>
+      <LastGenOutput>EFVideoDbContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
